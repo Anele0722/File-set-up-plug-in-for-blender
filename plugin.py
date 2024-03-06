@@ -7,11 +7,11 @@ def add_image_plane(image_path, location=(0, 0, 0), scale=(1, 1, 1)):
     bpy.ops.import_image.to_plane(files=[{"name": image_path}], directory=r"C:\Users\Shayne\Desktop\TD Final Project\C01020_Env.png")
     # Get a reference to the newly created plane object
     plane = bpy.context.object
-    # Set the location of the plane in 3D space
-#    plane.location = (0,0,0)
-    # Set the scale of the plane
-#    plane.scale = scale
-#
+    #Set the location of the plane in 3D space
+    plane.location = location
+   # Set the scale of the plane
+    plane.scale = scale
+
 # Function to create a lightbox in the scene
 def create_lightbox(location=(0, 0, 0), size=1):
     # Use Blender's built-in operator to add a plane mesh
@@ -31,16 +31,16 @@ def create_lightbox(location=(0, 0, 0), size=1):
 def create_preset_cameras():
     # Define parameters for preset cameras
     camera_params = [
-        {"name": "Camera_1", "location": (-10, -10, 0), "rotation": (math.radians(90),math.radians(2),math.radians(-48))},
-        {"name": "Camera_2", "location": (0, -50, 0), "rotation": (math.radians(90),math.radians(0),math.radians(0)))},
-        {"name": "Camera_3", "location": (10, -10, 0), "rotation": (math.radians(90),math.radians(0),math.radians(-399)))},
+        {"name": "Camera_1", "location": (-10, -30, 0), "rotation": (math.radians(90),math.radians(0),math.radians(-20))},
+        {"name": "Camera_2", "location": (0, -50, 0), "rotation": (math.radians(90),math.radians(0),math.radians(0))},
+        {"name": "Camera_3", "location": (10, -10, 0), "rotation": (math.radians(90),math.radians(0),math.radians(20))}
     ]
 
     # Loop through each camera parameter
     for params in camera_params:
         
         # Create a new camera data object
-        camera_data = bpy.data.cameras.new(name=params["name"] 
+        camera_data = bpy.data.cameras.new(name=params["name"])
         # Set the lens of the camera to 50mm
         camera_data.lens = 50
         # Set the sensor width and height of the camera
@@ -57,7 +57,7 @@ def create_preset_cameras():
 # Entry point of the script
 if __name__ == "__main__":
     # Specify the path to the image file
-    image_path = r"C:\Users\Shayne\Desktop\TD Final Project\C01020_Env.png"
+    image_path = r"C:\Users\User\Desktop\TD Final Project\C01020_Env.png"
     # Specify the location of the lightbox
     lightbox_location = (10, -6, 4)
     # Specify the size of the lightbox
