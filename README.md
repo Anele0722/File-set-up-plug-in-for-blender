@@ -35,7 +35,6 @@ This Blender plugin is designed to streamline the file setup process for composi
 ## Challenges Faced
 
 1. **Operator Availability**: Some operators used in the plugin were not available by default in Blender. This required one to enable the necessary add-ons.
-2. **User Interface Design**: Designing a user-friendly interface that accommodates all necessary settings without overwhelming the user was a challenge. Iterative testing and feedback helped refine the UI.
 3. **Error Handling**: Ensuring the plugin gracefully handles errors, such as missing image files or incorrect settings, requires careful consideration and implementation to maintain user confidence and prevent crashes.
 
 ## Resources Used
