@@ -57,7 +57,7 @@ def create_preset_cameras():
 # Entry point of the script
 if __name__ == "__main__":
     # Specify the path to the image file
-    image_path = r"C:\Users\User\Desktop\TD Final Project\C01020_Env.png"
+    image_path = r"C:\Users\Shayne\Desktop\TD Final Project\C01020_Env.png"
     # Specify the location of the lightbox
     lightbox_location = (10, -6, 4)
     # Specify the size of the lightbox
